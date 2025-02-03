@@ -1,0 +1,7 @@
+---
+const { class: className, size = "max-w-screen-xl" } = Astro.props;
+---
+
+<main class:list={["mx-auto flex flex-col gap-24 px-0", className, size]}>
+    <slot />
+</main>
