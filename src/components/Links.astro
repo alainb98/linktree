@@ -27,13 +27,16 @@ const { links, name, description } = Astro.props;
                     class="h-24 w-24 rounded-full border-2 border-gray-300 object-cover md:h-32 md:w-32"
                 />
             </div>
-            <h1 class="harmony text-gradient select-none text-3xl font-extrabold">{name}</h1>
+            <h1
+                class="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text select-none text-3xl font-extrabold">
+                {name}
+            </h1>
             <p class="select-none font-medium text-hn-text-primary">{description}</p>
         </div>
         <ul class="list-none space-y-3">
             {
                 links.map((link) => (
-                    <li class="custom-transition bg-hn-white flex w-full items-center gap-4 rounded-full border border-zinc-400 px-4 py-3 hover:scale-105">
+                    <li class="custom-transition flex w-full items-center gap-4 rounded-full border border-zinc-400 px-4 py-3 hover:scale-105">
                         <a href={link.href} class="block w-full text-center text-hn-text-primary">
                             {link.title}
                         </a>
